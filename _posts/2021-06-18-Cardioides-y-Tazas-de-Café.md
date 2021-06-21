@@ -6,6 +6,7 @@ cover-img: /assets/img/cardioide_portada.jpeg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/path.jpg
 tags: [books, test]
+js: /assets/js/animaciones_objeto.js
 ---
 
 Este post es una prueba para escribir Markdown por primera vez. Además, en este post se va a demostrar que los cardioides son lo más. Se forman multiplicando numeros en el borde de un circulo y uniendo los resultados (!?!?!):
