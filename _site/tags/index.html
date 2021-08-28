@@ -78,7 +78,7 @@
   <meta property="og:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
 
   
-  <meta property="og:image" content="http://localhost:4000/assets/img/avatar-icon.jpg">
+  <meta property="og:image" content="http://localhost:4000/assets/img/img_inicio.png">
   
 
   
@@ -97,7 +97,7 @@
   <meta property="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
 
   
-  <meta name="twitter:image" content="http://localhost:4000/assets/img/avatar-icon.jpg">
+  <meta name="twitter:image" content="http://localhost:4000/assets/img/img_inicio.png">
   
 
   
@@ -124,9 +124,6 @@
           <li class="nav-item">
             <a class="nav-link" href="/aboutme">¿Quien soy?</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Musica">Música</a>
-          </li>
         <li class="search-icon">
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
             <span id="nav-search-icon" class="fa fa-search"></span>
@@ -141,7 +138,7 @@
     <div class="avatar-container">
       <div class="avatar-img-border">
         <a href="http://localhost:4000/">
-          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/avatar-icon.jpg" />
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/img_inicio.png" />
         </a>
       </div>
     </div>
@@ -163,7 +160,7 @@
        \
         { \
           "title"    : "Cardioides y Tazas de Coffee", \
-          "category" : "mathanimations", \
+          "category" : "matemáticaanimaciones", \
           "url"      : "/2021-06-21-Cardioides-y-Tazas-de-Coffee/", \
           "date"     : "June 21, 2021" \
         }, \
@@ -184,16 +181,23 @@
         }, \
        \
         { \
-          "title"    : "About me", \
+          "title"    : "Tomás Di Napoli", \
           "category" : "page", \
           "url"      : "/aboutme/", \
           "date"     : "January 1, 1970" \
         }, \
        \
         { \
-          "title"    : "Tomás Di Napoli", \
+          "title"    : "Bitácora de Dina", \
           "category" : "page", \
           "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tomás Di Napoli", \
+          "category" : "page", \
+          "url"      : "/not-aboutme/", \
           "date"     : "January 1, 1970" \
         }, \
        \
@@ -254,18 +258,18 @@
     <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
       
 
-      <a href="#animations" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;animations&nbsp;(1)</a><a href="#math" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;math&nbsp;(1)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(1)</a><div id="full-tags-list"><h2 id="animations" class="linked-section">
+      <a href="#animaciones" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;animaciones&nbsp;(1)</a><a href="#matemática" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;matemática&nbsp;(1)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(1)</a><div id="full-tags-list"><h2 id="animaciones" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
-        &nbsp;animations&nbsp;(1)
+        &nbsp;animaciones&nbsp;(1)
     </h2>
     <div class="post-list"><div class="tag-entry">
                 <a href="/2021-06-21-Cardioides-y-Tazas-de-Coffee/">Cardioides y Tazas de Coffee</a>
                 <div class="entry-date">
                     <time datetime="2021-06-21T00:00:00-04:00">21/06/2021</time>
                 </div>
-            </div></div><h2 id="math" class="linked-section">
+            </div></div><h2 id="matemática" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
-        &nbsp;math&nbsp;(1)
+        &nbsp;matemática&nbsp;(1)
     </h2>
     <div class="post-list"><div class="tag-entry">
                 <a href="/2021-06-21-Cardioides-y-Tazas-de-Coffee/">Cardioides y Tazas de Coffee</a>

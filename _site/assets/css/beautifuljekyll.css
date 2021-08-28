@@ -17,6 +17,7 @@ body {
 p {
   line-height: 1.5;
   margin: 1.875rem 0;
+  text-align: justify;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -43,7 +44,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085A1;
+  color: #4b8dc9;
 }
 blockquote {
   color: #808080;
@@ -75,12 +76,12 @@ hr.small {
 ::-moz-selection {
   color: #fff;
   text-shadow: none;
-  background-color: #0085A1;
+  background-color: #4b8dc9;
 }
 ::selection {
   color: #fff;
   text-shadow: none;
-  background-color: #0085A1;
+  background-color: #4b8dc9;
 }
 img::selection {
   color: #fff;
@@ -310,7 +311,7 @@ img {
 .navbar-custom .navbar-nav .nav-link:focus,
 .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover,
 .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:focus {
-  color: #0085A1;
+  color: #4b8dc9;
 }
 
 .navbar-custom .avatar-container {
@@ -457,7 +458,7 @@ footer .footer-custom-content {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085A1;
+  color: #4b8dc9;
 }
 
 .post-preview .post-title {
@@ -804,8 +805,8 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 .pagination .page-item .page-link:hover,
 .pagination .page-item .page-link:focus {
   color: #FFF;
-  border: 1px solid #0085A1;
-  background-color: #0085A1;
+  border: 1px solid #4b8dc9;
+  background-color: #4b8dc9;
 }
 
 /* --- Tables --- */

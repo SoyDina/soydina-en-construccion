@@ -6,9 +6,13 @@ gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [test]
 comments: true
+js: https://polyfill.io/v3/polyfill.min.js?features=es6
+js: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 ---
 
-This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices ligula id pulvinar vestibulum. Sed egestas blandit tellus sed lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac hendrerit sem. Vestibulum vel aliquam mauris, sit amet ultrices metus. Donec condimentum libero vel ipsum laoreet tincidunt. Donec et eros neque. Suspendisse dignissim, lectus quis dignissim fringilla, sapien erat venenatis mi, eu cursus diam nulla vehicula lectus. Morbi condimentum mauris vel lectus rhoncus, sed euismod dui blandit. Maecenas at orci eu lectus scelerisque sollicitudin vitae ut ipsum. Sed mattis, justo sed luctus scelerisque, ex lorem porttitor risus, id consequat diam dolor a justo. Maecenas porta tristique ante. Vestibulum pellentesque nisi at dignissim ornare. Ut sollicitudin nisl risus, at convallis justo pulvinar quis. 
+
+Este es un párrafo en el que voy a agregar una ecuación, como puede ser por ejemplo $$\mathbf{F} = m\mathbf{a}$$ o también, puede ser la ecuación de Schrödinger unidimensional, $$i \hbar \frac{\partial}{\partial t} \psi = -\frac{i \hbar}{2m} \frac{\partial^2}{\partial x^2} \psi + V \psi$$ o $$a = \frac{a}{b}$$ \(\frac{i \hbar}{2m} \nabla^2 \Psi \).
 
 **Here is some bold text**
 
