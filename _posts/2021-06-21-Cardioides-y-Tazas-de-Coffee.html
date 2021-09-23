@@ -2,7 +2,7 @@
 layout: post
 title: Cardioides y Tazas de Coffee
 subtitle: Tomás Di Napoli
-cover-img: /assets/img/cardioide_portada.jpeg
+cover-img: /assets/img/cardioide_header.png
 thumbnail-img: /assets/img/img_inicio.png
 share-img: /assets/img/cardioide_portada.jpeg
 tags: [matemática, animaciones]
@@ -13,19 +13,71 @@ js: /assets/js/animaciones_objeto.js
 
 
         <p >Para estrenar la página se me ocurrió hacer algo que combine tres cosas que me gustan mucho: la física, la 
-        matemática y las visualizaciones. De esas tres cosas salió la animación que se ve abajo, a la que pueden cambiarle los parámetros "Tabla" y "Velocidad" para ver las distintas figuras que se pueden formar.
-        De paso les muestro una ecuación \(\mathbf{F} = m\mathbf{a}\) es una eq.</p>
+        matemática y las visualizaciones. De esas tres cosas salió la animación que se ve abajo, a la que pueden cambiarle 
+        los parámetros "Tabla" y "Velocidad" para ver las distintas figuras que se pueden formar.
+        </p>
 
 
 <div class="numCont">
         <div id="factorDiv">
-          <label for="factor">Tabla: </label>
-          <input type="number" min="-9999" max="9999" value="2" step="1" id="factor" name="factor"> 
-          <button type="button" class="button" id="factorUp" onclick="factorUp()">+1</button>
-          <button type="button" class="button" id="factorDown" onclick="factorDown()">-1</button>
+          <label for="factor" style="font: 21px Jazz">Tabla: </label>
+          <input type="number" min="-9999" max="9999" value="2" step="1" id="factor" name="factor" style="
+          display: inline-block;
+          outline: 0;
+          border: 0;
+          cursor: pointer;
+          border-radius: 8px;
+          padding: 14px 24px 16px;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1;
+          transition: transform 200ms,background 200ms;
+          background: transparent;
+          color: #000000;
+          box-shadow: 0 0 0 3px #000000 inset;
+          :hover{
+              transform: translateY(-2px);
+          }
+          "> 
+          <button type="button" class="button" id="factorUp" style="
+          display: inline-block;
+          outline: 0;
+          border: 0;
+          cursor: pointer;
+          border-radius: 8px;
+          padding: 14px 24px 16px;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1;
+          transition: transform 200ms,background 200ms;
+          background: transparent;
+          color: #000000;
+          box-shadow: 0 0 0 3px #000000 inset;
+          :hover{
+              transform: translateY(-2px);
+          }
+          " onclick="factorUp()">+1</button>
+          <button type="button" class="button" id="factorDown" style="
+          display: inline-block;
+          outline: 0;
+          border: 0;
+          cursor: pointer;
+          border-radius: 8px;
+          padding: 14px 24px 16px;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1;
+          transition: transform 200ms,background 200ms;
+          background: transparent;
+          color: #000000;
+          box-shadow: 0 0 0 3px #000000 inset;
+          :hover{
+              transform: translateY(-2px);
+          }
+          " onclick="factorDown()">-1</button>
         </div>
         <div id="velocidadDiv">
-          <label for="velocidad">Velocidad:</label>
+          <label for="velocidad" style="font: 21px Jazz">Velocidad:</label>
           <input type="range" min="0" max="0.1" value="0" step="0.0001" id="velocidad" name="velocidad" class="slider"> 
         </div>
       </div>
@@ -39,44 +91,122 @@ js: /assets/js/animaciones_objeto.js
         estas figuras y cómo se forman. 
       </p>
       <p >
-        Vieron que uno de los parámetros se llama "Tabla", esto no es una coincidencia: cada una de las figuras esta relacionada 
-        con una tabla de multiplicar. Para ver esto primero que nada pueden dibujar un círculo y marcar su borde en 10 partes iguales.
+        Uno de los parámetros que se pueden variar más arriba se llama "Tabla", eso es porque cada una de las figuras que se forman esta relacionada 
+        con una "tabla de multiplicar". Para verlo, se pueden representar los números enteros como puntitos equiespaciados en el borde de un círculo,
+        eligiendo uno de los puntos como el número cero, y determinando que los números aumentan en el mismo sentido que las agujas del reloj. Así, si
+        dibujamos 10 puntos en el borde del círculo, quedan etiquetados todos los números desde el 0 hasta el 9.
       </p>
       
       
 <p><img src="/assets/img/circulo_marcado.png" alt="circulo_marcado" class="mx-auto d-block" /></p>
 
-<p >Ahora acá va algo de texto hasta que les muestro la próxima animación!! Miren y jueguen:</p>
-
-
-      
-      <p >
-        No se parece ni un poco a la del principio. Pero esto es porque sólo lo hice con 10 marcas, fijense que pasa si aumentan la cantidad de marcas.
+      <p>
+        Ahora, con los puntos marcados podemos empezar a unirlos, pero ¿Con qué criterio?. Acá es donde entran en juego las tablas de multiplicar. 
+        Elijamos, por ejemplo, la tabla del 2 y empecemos a recorrer los puntos a partir del 0 de forma horaria. A cada punto lo vamos a multiplicar
+        por 2 y vamos a dibujar una recta que lo una con su resultado, por ejemplo para el 0 queda \(\mathbf{0} \times 2 = \mathbf{0}\), por lo que hay que unirlo
+        consigo mismo, o sea, no unirlo con nada. Por otro lado, para el 1 queda \(\mathbf{1} \times 2 = \mathbf{2}\) es decir, hay que unir el punto 1
+        con el punto 2, y así podríamos seguir con el resto de los puntos. 
       </p>
+
+      <p >
+        Se habrán dado cuenta, que al llegar al punto número 5 vamos a tener un problema. Según la tabla del 2, al punto 5 habría que unirlo con el punto
+        \(\mathbf{5} \times 2 = \mathbf{10}!!\) Pero habíamos enumerado sólo hasta el punto 9. Para resolver esto y poder unir todos los puntos que dibujamos
+        en el círculo, podemos usar la función resto.
+      </p>
+      
+      <p>
+        Lo que hace la función resto es decirnos cual es el resto de dividir un número por otro número, al igual que cuando hacíamos ejercicios de división
+        en la primaria. El número que dividiremos es el resultado de la multiplicación, y el número por el cual dividiremos es la cantidad de puntos que
+        dibujamos en el círculo. Por ejemplo, en el caso de la imagen anterior, queríamos multiplicar el \(\mathbf{5}\) por \(2\) y teníamos dibujados \(10\)
+        puntos. El resultado de la multiplicación es \(10\), que dividido por la cantidad de puntos (también \(10\)) da \(1\), y el resto de la división es 
+        \(\mathbf{0}\). En conclusión, deberíamos unir el punto \(5\) con el \(0\). Para el punto \(\mathbf{6}\), el resultado de la multiplicación es 12, y 
+        el resto al dividir por 10 es \(\mathbf{2}\), así que uniríamos el \(6\) con el \(2\), y así con el resto de puntos hasta llegar al \(9\) y unir todos. 
+      </p>
+
+      <p>
+        Abajo pueden ver el mismo círculo pero con todos los puntos unidos correctamente. Fijensé que pasa cuando aumentan mucho la cantidad de puntos.
+      </p>
+
       <div class="numCont">
-        <label for="marcas">Marcas: </label>
-        <input type="range" min="1" max="100" value="10" step="1" id="marcas" name="marcas" class="slider">
+        <label for="marcas" style="font: 21px Jazz">Puntos: </label>
+        <input type="range" min="1" max="100" value="10" step="1" id="marcas" name="marcas" class="slider" >
       </div>
       <div id="cardioide_animacionDiv">
         <canvas class="mx-auto d-block" id="cardioide_explicacion" width="550" height="550"></canvas>
-      </div>
-      
-            <div id="radioDiv">
-        <label for="radio">Radio:</label>
+      </div>     
+
+      <p>
+        Para muchos puntos se forma la misma figura que la primera animación con el parámetro <i>Tabla</i>\(=2\). Las figuras que se forman para 
+        valores de <i>Tabla</i> enteros(2, 3, 4...) se llaman epicicloides, que en griego se puede descomponer en <i>epi</i>=arriba o afuera + 
+        <i>ciclo</i>=rueda o círculo + <i>oides</i>=apariencia o forma. Para formar las estas figuras usamos círculos, por lo que la parte <i>cicloide</i>
+        de la etimología queda bien justificada, pero ¿Por qué usan el prefijo <i>epi</i>?¿Qué es lo que está del lado de arriba o afuera?
+      </p>
+
+      <p>
+        Lo que pasa es que unir los puntos con rectas no es la única manera de generar epicicloides. Una forma más gráfica y con menos multiplicaciones de
+        formar un epicicloide es trazando la curva que sigue un punto de un círculo que rueda <i>arriba</i> de otro círculo, donde la relación entre los 
+        radios de ambos círculos es análoga al parámetro <i>Tabla</i>, ya que determina el tipo de epicicloide que se genera: 
+      </p>
+
+      <div id="radioDiv">
+        <label for="radio" style="font: 20px Jazz">Radio:</label>
         <input type="range" min="1" max="120" value="120" step="0.01" id="radio" name="radio" class="slider"> 
       </div>
       <div id="relacionDiv">
-        <h4 id="relacion" style="font: 25px Jazz">Relación entre radios: 1</h4>
-        <button id="relacionUp" class="button" onclick="relacionUp()">+</button>
-        <button id="relacionDown" class="button" onclick="relacionDown()">-</button>
+        <h5 id="relacion" style="font: 20px Jazz">Relación entre radios: 1</h5>
+        <button id="relacionUp" class="button" style="
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 14px 24px 16px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        transition: transform 200ms,background 200ms;
+        background: transparent;
+        color: #000000;
+        box-shadow: 0 0 0 3px #000000 inset;
+        :hover{
+            transform: translateY(-2px);
+        }
+        " onclick="relacionUp()">+</button>
+        <button id="relacionDown" class="button" style="
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 14px 24px 16px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        transition: transform 200ms,background 200ms;
+        background: transparent;
+        color: #000000;
+        box-shadow: 0 0 0 3px #000000 inset;
+        :hover{
+            transform: translateY(-2px);
+        }
+        " onclick="relacionDown()">-</button>
       </div>
       <div id="epicicloidesDiv">
         <canvas class="mx-auto d-block" id="epicicloides" width="750" height="720"></canvas>
       </div>
       
 
-	<p >Bueno espero q les haya gustado no sean gilxs chau</p>
+	<p>
+    Otro lugar donde se pueden encontrar epicicloides es en tazas cuando les pega una luz del techo en diagonal. Los rayos de luz rebotan de forma tal
+    que se intersecan en la figura de un nefroide(el epicicloide correspondiente a la tabla del 3). Una prueba matemática rigurosa de esto último la pueden
+    ver en <a href="https://chalkdustmagazine.com/features/cardioids-coffee-cups/">este link</a>.
+  </p>
           
+
+  <p><img src="/assets/img/cardioides.jpg" alt="cardioides" class="mx-auto d-block" /></p>
+  <p><img src="/assets/img/nefroide.jpg" alt="cardioides" class="mx-auto d-block" /></p>
+
+
 
 
   
